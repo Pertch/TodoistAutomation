@@ -15,6 +15,7 @@ public class TestExample extends BaseTest {
     TaskPage taskPage;
     LoginStep loginStep;
     SettingsPage settingsPage;
+
     @BeforeMethod
     public void setUp(){
         mainPage = new MainPage(driver);
@@ -26,7 +27,7 @@ public class TestExample extends BaseTest {
         settingsPage = new SettingsPage(driver);
     }
     @Test
-    public void test1(){
+    public void test1() throws InterruptedException {
         HttpClient.createProjct();
         loginStep.login();
         homePage.clickBurgerMenu();
@@ -35,7 +36,7 @@ public class TestExample extends BaseTest {
     }
 
     @Test
-    public void test2(){
+    public void test2() throws InterruptedException {
         loginStep.login();
         homePage.clickBurgerMenu();
         homePage.clickProjectsDownButton();
@@ -49,7 +50,7 @@ public class TestExample extends BaseTest {
     }
 
     @Test
-    public void test3(){
+    public void test3() throws InterruptedException {
         loginStep.login();
         homePage.clickBurgerMenu();
         homePage.clickProjectsDownButton();

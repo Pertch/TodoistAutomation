@@ -25,7 +25,8 @@ public class LoginStep {
         homePage = new HomePage(driver);
 
     }
-    public void login() {
+    public void login() throws InterruptedException {
+        Thread.sleep(3000);
         mainPage.clickWithEmailButton();
         loginPage.setEmail(EMAIL);
         loginPage.clickContinueWithEmailButton();

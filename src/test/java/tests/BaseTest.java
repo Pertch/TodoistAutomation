@@ -7,6 +7,7 @@ import org.apache.commons.lang3.SystemUtils;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import sun.awt.windows.ThemeReader;
 
 
 import java.io.IOException;
@@ -31,9 +32,12 @@ public class BaseTest {
 
         try {
             startServer();
+            Thread.sleep(20000);
             driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"),desiredCapabilities);
         }catch (MalformedURLException e){
             e.fillInStackTrace();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
     }
 
@@ -82,8 +86,7 @@ public class BaseTest {
 
     @AfterClass
     public void closeAppium(){
-        quitTask();
-        //driver.closeApp();
-//        driver.close();
+   //     quitTask();
+        driver.closeApp();
     }
 }

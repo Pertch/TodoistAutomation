@@ -50,7 +50,8 @@ public class HomePage {
     }
 
 
-    public void clickBurgerMenu(){
+    public void clickBurgerMenu() throws InterruptedException {
+        Thread.sleep(5000);
         burgerMenuButton.click();
         try {
             Thread.sleep(5000);

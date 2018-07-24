@@ -30,7 +30,8 @@ public class LoginPage {
         PageFactory.initElements(driver,this);
     }
 
-    public void setEmail(String email){
+    public void setEmail(String email) throws InterruptedException {
+        Thread.sleep(7000);
         emailField.sendKeys(email);
     }
 
@@ -38,7 +39,8 @@ public class LoginPage {
         continueWithEmailButton.click();
     }
 
-    public void setPassword(String password){
+    public void setPassword(String password) throws InterruptedException {
+        Thread.sleep(7000);
         passwordField.sendKeys(password);
     }
 
