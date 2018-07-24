@@ -63,7 +63,7 @@ public class BaseTest {
             e.fillInStackTrace();
         }
     }
-
+//
     public void quitTask(){
         Runtime runtime = Runtime.getRuntime();
         if(SystemUtils.IS_OS_WINDOWS) {
